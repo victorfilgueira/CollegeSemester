@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IStudent } from './student/IStudent';
+import { StudentService } from './student/student.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CollegeSemester';
+
+  constructor(private studentService: StudentService)
+  {}
+
+  getStudents() {
+	this.studentService.getStudents().then(students => console.log(students)).catch(error => console.error(error));
+  }
+
 }
+
