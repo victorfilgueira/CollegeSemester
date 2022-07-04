@@ -1,0 +1,51 @@
+<div id="container">
+	<p>Lista de Alunos</p>
+</div>
+<div id="grid1">
+	<igx-grid #grid1 [data]="StudentsData" [autoGenerate]="false" 
+	(columnInit)="onColumnInit($event)" width="80%" height="550px">
+	<igx-paginator></igx-paginator>
+
+	<igx-column
+		header="Nome"
+		field="name"
+	></igx-column>
+
+	<igx-column
+		header="Turma Id"
+		field="class"
+	></igx-column>
+
+	<igx-column
+		header="Ativo"
+		field="active"
+	></igx-column>
+
+	<igx-column
+		header="Prova 1"
+		field="p1"
+	></igx-column>
+
+	<igx-column
+		header="Prova 2"
+		field="p2"
+	></igx-column>
+
+	<igx-column
+		header="Prova 3"
+		field="p3"
+	></igx-column>
+
+	<igx-column
+		header="Prova Final"
+		field="pFinal"
+	></igx-column>
+
+	<igx-column
+		header="Aprovado"
+		field="approved"
+	></igx-column>
+
+	</igx-grid>
+</div>
+
